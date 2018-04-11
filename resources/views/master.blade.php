@@ -24,7 +24,7 @@
             <a class="nav-link" href="/movies">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/movies/add">Add movie</a>
+            <a class="nav-link" href="{{route('create-movie')}}">Add movie</a>
           </li>
         </ul>
       </div>
