@@ -22,3 +22,5 @@ Route::post('movies/create', 'MoviesController@store');
 
 Route::post('movies/{id}/comments', 'CommentsController@store')->name('comment-movie');
 
+Route::get('/ganres/{ganre}', 'GanresController@show')->name('single-ganre');
+

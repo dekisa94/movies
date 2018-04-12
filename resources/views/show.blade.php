@@ -10,12 +10,14 @@ Movies
     <hr>
     {{$movie->storyline}}
     <hr>
+    <a href="{{route('single-ganre', ['ganre' => $movie->ganre])}}">{{$movie->ganre}}</a>
+    <hr>
     {{$movie->year}}
     <hr>
     {{$movie->director}}
     <hr>
     <hr>
-    <form method="POST" action="{{route('comment-movie', [ 'movie_id' => $movie->id])}}">
+    <form method="POST" action="{{route('comment-movie', [ 'id' => $movie->id])}}">
       {{csrf_field()}}
       <h3>Dodaj komentar:</h3>
           <div class="form-group">
