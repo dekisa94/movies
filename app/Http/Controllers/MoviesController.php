@@ -23,7 +23,7 @@ class MoviesController extends Controller
     }
     public function store()
     {
-        $this->validate(request(), ['title'=>'required', 'ganre'=>'required', 'year' => 'required', 'storyline' => 'required|max:1000']);
+        $this->validate(request(), ['title'=>'required', 'ganre'=>'required', 'year' => 'required|integer|between:1900,2018', 'storyline' => 'required|max:1000']);
         Movie:: create(request()->all());
         return redirect('/movies');
     }
